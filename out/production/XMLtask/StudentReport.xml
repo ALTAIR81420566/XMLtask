@@ -1,0 +1,64 @@
+<epam:studentsReport xmlns:epam="http://www.epam.com">
+    <epam:student>
+        <epam:fullName>string</epam:fullName>
+        <epam:city>string</epam:city>
+        <epam:email>string</epam:email>
+        <epam:dateOfStartCourse>2008-09-29</epam:dateOfStartCourse>
+        <epam:isContractSigned>true</epam:isContractSigned>
+        <epam:programm>
+            <epam:name>string</epam:name>
+            <epam:author>string</epam:author>
+            <epam:dateOfCreate>string</epam:dateOfCreate>
+            <epam:listOfCourses>
+                <!--1 or more repetitions:-->
+                <epam:course>
+                    <epam:name>string</epam:name>
+                    <epam:author>string</epam:author>
+                    <epam:dateOfCreate>string</epam:dateOfCreate>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="string">
+                            <epam:name>string</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>100</epam:duration>
+                            <!--Optional:-->
+                            <epam:assessment>100</epam:assessment>
+                            <epam:status>string</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+            </epam:listOfCourses>
+        </epam:programm>
+    </epam:student>
+    <epam:student>
+        <epam:fullName>string</epam:fullName>
+        <epam:city>string</epam:city>
+        <epam:email>string</epam:email>
+        <epam:dateOfStartCourse>2008-09-29</epam:dateOfStartCourse>
+        <epam:isContractSigned>true</epam:isContractSigned>
+        <epam:programm>
+            <epam:name>string</epam:name>
+            <epam:author>string</epam:author>
+            <epam:dateOfCreate>string</epam:dateOfCreate>
+            <epam:listOfCourses>
+                <!--1 or more repetitions:-->
+                <epam:course>
+                    <epam:name>string</epam:name>
+                    <epam:author>string</epam:author>
+                    <epam:dateOfCreate>string</epam:dateOfCreate>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="string">
+                            <epam:name>string</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>100</epam:duration>
+                            <!--Optional:-->
+                            <epam:assessment>100</epam:assessment>
+                            <epam:status>string</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+            </epam:listOfCourses>
+        </epam:programm>
+    </epam:student>
+</epam:studentsReport>
