@@ -6,11 +6,28 @@
     <xs:element name="studentsReport">
         <xs:complexType>
             <xs:sequence>
-                <xs:element type="t:studentType" name="student" maxOccurs="unbounded"/>
+                <xs:element type="t:studentType" name="student" maxOccurs="unbounded">
+
+                    <xs:unique name="uniqueProgrammFields">
+                        <xs:selector xpath="t:student/t:programm"/>
+                        <xs:field xpath="t:name"/>
+                    </xs:unique>
+
+                    <xs:unique name="uniqueCourseFields">
+                        <xs:selector xpath="t:student/t:programm/t:listOfCourses/t:course"/>
+                        <xs:field xpath="t:name"/>
+                    </xs:unique>
+                </xs:element>
                 <xs:element type="t:programs" name="programs"/>
+                <xs:element type="t:courses" name="courses"/>
             </xs:sequence>
 
         </xs:complexType>
+        <xs:unique name="uniqueStudentFields">
+            <xs:selector xpath="t:student"/>
+            <xs:field xpath="t:fullName"/>
+            <xs:field xpath="t:email"/>
+        </xs:unique>
         <xs:key name="programmsKey">
             <xs:selector xpath="t:programs/t:programm"/>
             <xs:field xpath="t:name"/>
@@ -21,21 +38,33 @@
             <xs:field xpath="t:name"/>
         </xs:keyref>
 
+        <xs:key name="coursesKey">
+            <xs:selector xpath="t:courses/t:course"/>
+            <xs:field xpath="t:name"/>
+        </xs:key>
 
-        <xs:unique name="uniqueStudentFields">
-            <xs:selector xpath="t:student"/>
-            <xs:field xpath="t:city"/>
-            <xs:field xpath="t:fullName"/>
-            <xs:field xpath="t:email"/>
-        </xs:unique>
-        <xs:unique name="uniqueProgrammFields">
-            <xs:selector xpath="t:programm"/>
+        <xs:keyref name="coursesForeignKeyForStudent" refer="t:coursesKey">
+            <xs:selector xpath="t:student/t:programm/t:listOfCourses/t:course"/>
             <xs:field xpath="t:name"/>
-        </xs:unique>
-        <xs:unique name="uniqueCourseFields">
-            <xs:selector xpath="t:course"/>
+        </xs:keyref>
+        <xs:keyref name="coursesForeignKeyForProgramm" refer="t:coursesKey">
+            <xs:selector xpath="t:programs/t:programm/t:listOfCourses/t:course"/>
             <xs:field xpath="t:name"/>
-        </xs:unique>
+        </xs:keyref>
+
+        <xs:key name="tasksKey">
+            <xs:selector xpath="t:courses/t:course/t:listOfTasks/t:task"/>
+            <xs:field xpath="t:name"/>
+        </xs:key>
+
+        <xs:keyref name="tasksForeignKeyForStudent" refer="t:tasksKey">
+            <xs:selector xpath="t:student/t:programm/t:listOfCourses/t:course/t:listOfTasks/t:task"/>
+            <xs:field xpath="t:name"/>
+        </xs:keyref>
+
+
+
+
 
 
     </xs:element>
@@ -69,14 +98,26 @@
                 <xs:element type="t:myString" name="name"/>
                 <xs:element type="t:myString" name="author"/>
                 <xs:element type="t:myString" name="dateOfCreate"/>
-                <xs:element type="t:listOfCoursesType" name="listOfCourses"/>
+                <xs:element type="t:listOfCoursesType" name="listOfCourses">
+                    <xs:unique name="uniqueCourseFieldsForProgramm">
+                        <xs:selector xpath="t:course"/>
+                        <xs:field xpath="t:name"/>
+                    </xs:unique>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     <xs:complexType name="listOfCoursesType">
         <xs:sequence>
-            <xs:element type="t:courseType" name="course" maxOccurs="unbounded" minOccurs="1"/>
+            <xs:element type="t:progCourseType" name="course" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:complexType name="progCourseType">
+        <xs:sequence>
+            <xs:element name="name" type="t:myString"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="courseType">
         <xs:sequence>
             <xs:element name="name" type="t:myString"/>
@@ -91,7 +132,76 @@
             <xs:element type="t:taskType" name="task" maxOccurs="unbounded" minOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
+
     <xs:complexType name="taskType">
+        <xs:sequence>
+            <xs:element type="t:myString" name="name"/>
+            <xs:element name="duration" minOccurs="0">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="type">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="theory"/>
+                    <xs:enumeration value="practic"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="studentsReportTyped">
+        <xs:sequence>
+            <xs:element type="t:studentType" name="student" maxOccurs="unbounded">
+
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="myString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="70"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="studProgrammType">
+        <xs:sequence>
+           <xs:element name="name" type="t:myString"/>
+            <xs:element name="listOfCourses" type="t:studListOfCoursesType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="studListOfCoursesType">
+        <xs:sequence>
+            <xs:element name="course" type="t:studCourseType" maxOccurs="unbounded">
+
+
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="studCourseType">
+        <xs:sequence>
+            <xs:element name="name" type="t:myString"/>
+            <xs:element name="listOfTasks" type="t:studListOfTasksType">
+                <xs:unique name="uniqueTasksNames">
+                    <xs:selector xpath="t:task"/>
+                    <xs:field xpath="t:name"/>
+                </xs:unique>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="studListOfTasksType">
+        <xs:sequence>
+            <xs:element name="task" type="t:studTaskType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="studTaskType">
         <xs:sequence>
             <xs:element type="t:myString" name="name"/>
             <xs:element name="duration" minOccurs="0">
@@ -127,74 +237,11 @@
             </xs:simpleType>
         </xs:attribute>
     </xs:complexType>
-    <xs:complexType name="studentsReportTyped">
-        <xs:sequence>
-            <xs:element type="t:studentType" name="student" maxOccurs="unbounded">
 
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:simpleType name="myString">
-        <xs:restriction base="xs:string">
-            <xs:minLength value="1"/>
-            <xs:maxLength value="70"/>
-        </xs:restriction>
-    </xs:simpleType>
-
-    <xs:complexType name="studProgrammType">
+    <xs:complexType name="courses">
         <xs:sequence>
-           <xs:element name="name" type="t:myString"/>
-            <xs:element name="studListOfCourses" type="studListOfCoursesType"/>
+            <xs:element name="course" type = "t:courseType" maxOccurs="unbounded"/>
         </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="studListOfCoursesType">
-        <xs:sequence>
-            <xs:element name="studCourse" type="studCourseType"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="studCourseType">
-        <xs:sequence>
-            <xs:element name="name" type="t:myString"/>
-            <xs:element name="studListOfTasks" type="studListOfTasksType"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="studListOfTasksType">
-        <xs:sequence>
-            <xs:element name="studTask" type="studTaskType"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="studTaskType">
-        <xs:sequence>
-            <xs:element type="t:myString" name="name"/>
-            <xs:element name="assessment" minOccurs="0">
-                <xs:simpleType>
-                    <xs:restriction base="xs:integer">
-                        <xs:minInclusive value="0"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="status">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:enumeration value="to do"/>
-                        <xs:enumeration value="in progress"/>
-                        <xs:enumeration value="done"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-        </xs:sequence>
-        <xs:attribute name="type">
-            <xs:simpleType>
-                <xs:restriction base="xs:string">
-                    <xs:enumeration value="theory"/>
-                    <xs:enumeration value="practic"/>
-                </xs:restriction>
-            </xs:simpleType>
-        </xs:attribute>
     </xs:complexType>
 </xs:schema>
 

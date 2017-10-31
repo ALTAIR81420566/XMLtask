@@ -1,64 +1,89 @@
 <epam:studentsReport xmlns:epam="http://www.epam.com">
     <epam:student>
-        <epam:fullName>string</epam:fullName>
+        <epam:fullName>hhh</epam:fullName>
         <epam:city>string</epam:city>
-        <epam:email>string</epam:email>
+        <epam:email>almm@epam.com</epam:email>
         <epam:dateOfStartCourse>2008-09-29</epam:dateOfStartCourse>
         <epam:isContractSigned>true</epam:isContractSigned>
         <epam:programm>
-            <epam:name>string</epam:name>
-            <epam:author>string</epam:author>
-            <epam:dateOfCreate>string</epam:dateOfCreate>
+            <epam:name>Полная</epam:name>
             <epam:listOfCourses>
                 <!--1 or more repetitions:-->
                 <epam:course>
-                    <epam:name>string</epam:name>
-                    <epam:author>string</epam:author>
-                    <epam:dateOfCreate>string</epam:dateOfCreate>
+                    <epam:name>sas</epam:name>
                     <epam:listOfTasks>
                         <!--1 or more repetitions:-->
-                        <epam:task type="string">
-                            <epam:name>string</epam:name>
-                            <!--Optional:-->
-                            <epam:duration>100</epam:duration>
+                        <epam:task type="theory">
+                            <epam:name>epam</epam:name>
                             <!--Optional:-->
                             <epam:assessment>100</epam:assessment>
-                            <epam:status>string</epam:status>
+                            <epam:status>done</epam:status>
                         </epam:task>
                     </epam:listOfTasks>
                 </epam:course>
+                <epam:course>
+                    <epam:name>sasa</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>epamd</epam:name>
+                            <!--Optional:-->
+                            <epam:assessment>100</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+
             </epam:listOfCourses>
         </epam:programm>
     </epam:student>
-    <epam:student>
-        <epam:fullName>string</epam:fullName>
-        <epam:city>string</epam:city>
-        <epam:email>string</epam:email>
-        <epam:dateOfStartCourse>2008-09-29</epam:dateOfStartCourse>
-        <epam:isContractSigned>true</epam:isContractSigned>
+
+
+    <epam:programs>
         <epam:programm>
-            <epam:name>string</epam:name>
-            <epam:author>string</epam:author>
-            <epam:dateOfCreate>string</epam:dateOfCreate>
+            <epam:name>Полная</epam:name>
+            <epam:author>Мурашев</epam:author>
+            <epam:dateOfCreate>31-10-2017</epam:dateOfCreate>
             <epam:listOfCourses>
-                <!--1 or more repetitions:-->
                 <epam:course>
-                    <epam:name>string</epam:name>
-                    <epam:author>string</epam:author>
-                    <epam:dateOfCreate>string</epam:dateOfCreate>
-                    <epam:listOfTasks>
-                        <!--1 or more repetitions:-->
-                        <epam:task type="string">
-                            <epam:name>string</epam:name>
-                            <!--Optional:-->
-                            <epam:duration>100</epam:duration>
-                            <!--Optional:-->
-                            <epam:assessment>100</epam:assessment>
-                            <epam:status>string</epam:status>
-                        </epam:task>
-                    </epam:listOfTasks>
+                    <epam:name>sas</epam:name>
                 </epam:course>
             </epam:listOfCourses>
         </epam:programm>
-    </epam:student>
+        <epam:programm>
+            <epam:name>Полzная</epam:name>
+            <epam:author>Мурашев</epam:author>
+            <epam:dateOfCreate>31-10-2017</epam:dateOfCreate>
+            <epam:listOfCourses>
+                <epam:course>
+                    <epam:name>sas</epam:name>
+                </epam:course>
+            </epam:listOfCourses>
+        </epam:programm>
+    </epam:programs>
+
+    <epam:courses>
+        <epam:course>
+            <epam:name>sas</epam:name>
+            <epam:author>s</epam:author>
+            <epam:dateOfCreate>1</epam:dateOfCreate>
+            <epam:listOfTasks>
+                <epam:task type="practic">
+                    <epam:name>epam</epam:name>
+                    <epam:duration>3</epam:duration>
+                </epam:task>
+            </epam:listOfTasks>
+        </epam:course>
+        <epam:course>
+            <epam:name>sasa</epam:name>
+            <epam:author>s</epam:author>
+            <epam:dateOfCreate>1</epam:dateOfCreate>
+            <epam:listOfTasks>
+                <epam:task type="practic">
+                    <epam:name>epamd</epam:name>
+                    <epam:duration>3</epam:duration>
+                </epam:task>
+            </epam:listOfTasks>
+        </epam:course>
+    </epam:courses>
 </epam:studentsReport>

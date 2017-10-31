@@ -1,26 +1,486 @@
 <epam:studentsReport xmlns:epam="http://www.epam.com">
     <epam:student>
-        <epam:fullName>hhh</epam:fullName>
-        <epam:city>string</epam:city>
-        <epam:email>almm@epam.com</epam:email>
-        <epam:dateOfStartCourse>2008-09-29</epam:dateOfStartCourse>
+        <epam:fullName>Alexandr Sergeev</epam:fullName>
+        <epam:city>Saratov</epam:city>
+        <epam:email>alex@epam.com</epam:email>
+        <epam:dateOfStartCourse>2017-09-07</epam:dateOfStartCourse>
+        <epam:isContractSigned>false</epam:isContractSigned>
+        <epam:programm>
+            <epam:name>Полная</epam:name>
+            <epam:listOfCourses>
+                <!--1 or more repetitions:-->
+                <epam:course>
+                    <epam:name>Overview of Eclipse IDE</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Overview of Eclipse IDE</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>4</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Основы языка Java</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning the Java Language Basics</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>12</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Java Basics Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>4</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык Java - расширенные возможности</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning the Java Language advanced features</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>17</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Java Advance Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>16</epam:duration>
+                            <epam:assessment>4</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык XML</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning XML Language</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>6</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>XML Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык XSLT и XPath</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning XSLT and XPath Basics</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>14</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                        <epam:task type="theory">
+                            <epam:name>Equipment Stylesheets</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Технология Struts Framework</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Struts Framework Fundamentals</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Struts Framework Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>40</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Java Message Service Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>20</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс производства программного обеспечения</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Mastering Microsoft Project</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>3</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>MS Project Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                        <epam:task type="theory">
+                            <epam:name>Software development process. Development team and its structure</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>12</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс разработки программного обеспечения</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="practic">
+                            <epam:name>Team Project</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>80</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+
+            </epam:listOfCourses>
+        </epam:programm>
+    </epam:student>
+
+    <epam:student>
+        <epam:fullName>Boris Romanov</epam:fullName>
+        <epam:city>Saratov</epam:city>
+        <epam:email>boris@epam.com</epam:email>
+        <epam:dateOfStartCourse>2017-09-07</epam:dateOfStartCourse>
         <epam:isContractSigned>true</epam:isContractSigned>
         <epam:programm>
             <epam:name>Полная</epam:name>
             <epam:listOfCourses>
                 <!--1 or more repetitions:-->
                 <epam:course>
-                <epam:name>string</epam:name>
-                <epam:listOfTasks>
-                    <!--1 or more repetitions:-->
-                    <epam:task type="theory">
-                        <epam:name>string</epam:name>
-                        <!--Optional:-->
-                        <epam:assessment>100</epam:assessment>
-                        <epam:status>done</epam:status>
-                    </epam:task>
-                </epam:listOfTasks>
-            </epam:course>
+                    <epam:name>Overview of Eclipse IDE</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Overview of Eclipse IDE</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>4</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Основы языка Java</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning the Java Language Basics</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>12</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Java Basics Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>4</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык Java - расширенные возможности</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning the Java Language advanced features</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>17</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Java Advance Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>16</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык XML</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning XML Language</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>6</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>XML Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык XSLT и XPath</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning XSLT and XPath Basics</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>14</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="theory">
+                            <epam:name>Equipment Stylesheets</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Технология Struts Framework</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Struts Framework Fundamentals</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Struts Framework Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>40</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Java Message Service Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>20</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс производства программного обеспечения</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Mastering Microsoft Project</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>3</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>MS Project Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="theory">
+                            <epam:name>Software development process. Development team and its structure</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>12</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс разработки программного обеспечения</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="practic">
+                            <epam:name>Team Project</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>80</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+
+            </epam:listOfCourses>
+        </epam:programm>
+    </epam:student>
+
+
+    <epam:student>
+        <epam:fullName>Vadim Petrov</epam:fullName>
+        <epam:city>Saratov</epam:city>
+        <epam:email>vadim@epam.com</epam:email>
+        <epam:dateOfStartCourse>2017-01-03</epam:dateOfStartCourse>
+        <epam:isContractSigned>true</epam:isContractSigned>
+        <epam:programm>
+            <epam:name>Специальная</epam:name>
+            <epam:listOfCourses>
+                <!--1 or more repetitions:-->
+
+                <epam:course>
+                    <epam:name>Язык XML</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning XML Language</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>6</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>XML Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык XSLT и XPath</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning XSLT and XPath Basics</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>14</epam:duration>
+                            <epam:status>to do</epam:status>
+                        </epam:task>
+                        <epam:task type="theory">
+                            <epam:name>Equipment Stylesheets</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:assessment>5</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+
+            </epam:listOfCourses>
+        </epam:programm>
+    </epam:student>
+
+    <epam:student>
+        <epam:fullName>Ivan Fedorov</epam:fullName>
+        <epam:city>Saratov</epam:city>
+        <epam:email>ivan34232@epam.com</epam:email>
+        <epam:dateOfStartCourse>2017-09-07</epam:dateOfStartCourse>
+        <epam:isContractSigned>false</epam:isContractSigned>
+        <epam:programm>
+            <epam:name>Укороченная</epam:name>
+            <epam:listOfCourses>
+                <!--1 or more repetitions:-->
+                <epam:course>
+                    <epam:name>Overview of Eclipse IDE</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Overview of Eclipse IDE</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>4</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Основы языка Java</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning the Java Language Basics</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>12</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Java Basics Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>4</epam:duration>
+                            <epam:assessment>3</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык Java - расширенные возможности</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Learning the Java Language advanced features</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>17</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>Java Advance Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>16</epam:duration>
+                            <epam:assessment>3</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс производства программного обеспечения</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="theory">
+                            <epam:name>Mastering Microsoft Project</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>3</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="practic">
+                            <epam:name>MS Project Practical Task</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>8</epam:duration>
+                            <epam:assessment>3</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                        <epam:task type="theory">
+                            <epam:name>Software development process. Development team and its structure</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>12</epam:duration>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс разработки программного обеспечения</epam:name>
+                    <epam:listOfTasks>
+                        <!--1 or more repetitions:-->
+                        <epam:task type="practic">
+                            <epam:name>Team Project</epam:name>
+                            <!--Optional:-->
+                            <epam:duration>80</epam:duration>
+                            <epam:assessment>3</epam:assessment>
+                            <epam:status>done</epam:status>
+                        </epam:task>
+                    </epam:listOfTasks>
+                </epam:course>
 
             </epam:listOfCourses>
         </epam:programm>
@@ -30,25 +490,196 @@
     <epam:programs>
         <epam:programm>
             <epam:name>Полная</epam:name>
-            <epam:author>Мурашев</epam:author>
-            <epam:dateOfCreate>31-10-2017</epam:dateOfCreate>
+            <epam:author>Nikolay Bublick</epam:author>
+            <epam:dateOfCreate>31-10-2013</epam:dateOfCreate>
             <epam:listOfCourses>
                 <epam:course>
-                    <epam:name>r</epam:name>
+                    <epam:name>Overview of Eclipse IDE</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Основы языка Java</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык Java - расширенные возможности</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык XML</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык XSLT и XPath</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Технология Struts Framework</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс производства программного обеспечения</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс разработки программного обеспечения</epam:name>
+                </epam:course>
+            </epam:listOfCourses>
+        </epam:programm>
+        <epam:programm>
+            <epam:name>Укороченная</epam:name>
+            <epam:author>Egor Letov</epam:author>
+            <epam:dateOfCreate>12-10-2015</epam:dateOfCreate>
+            <epam:listOfCourses>
+                <epam:course>
+                    <epam:name>Overview of Eclipse IDE</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Основы языка Java</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык Java - расширенные возможности</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Технология Struts Framework</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс производства программного обеспечения</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Процесс разработки программного обеспечения</epam:name>
+                </epam:course>
+            </epam:listOfCourses>
+        </epam:programm>
+        <epam:programm>
+            <epam:name>Специальная</epam:name>
+            <epam:author>Elena Kalasnikova</epam:author>
+            <epam:dateOfCreate>07-07-2016</epam:dateOfCreate>
+            <epam:listOfCourses>
+                <epam:course>
+                    <epam:name>Язык XML</epam:name>
+                </epam:course>
+                <epam:course>
+                    <epam:name>Язык XSLT и XPath</epam:name>
                 </epam:course>
             </epam:listOfCourses>
         </epam:programm>
     </epam:programs>
+
     <epam:courses>
         <epam:course>
-            <epam:name>s</epam:name>
-            <epam:author>s</epam:author>
-            <epam:dateOfCreate>1</epam:dateOfCreate>
+            <epam:name>Overview of Eclipse IDE</epam:name>
+            <epam:author>Artem Kolobkov</epam:author>
+            <epam:dateOfCreate>10-10-2016</epam:dateOfCreate>
             <epam:listOfTasks>
+                <epam:task type="theory">
+                    <epam:name>Overview of Eclipse IDE</epam:name>
+                    <epam:duration>4</epam:duration>
+                </epam:task>
+            </epam:listOfTasks>
+        </epam:course>
+        <epam:course>
+            <epam:name>Основы языка Java</epam:name>
+            <epam:author>Denis Murashev</epam:author>
+            <epam:dateOfCreate>10-10-2014</epam:dateOfCreate>
+            <epam:listOfTasks>
+                <epam:task type="theory">
+                    <epam:name>Learning the Java Language Basics</epam:name>
+                    <epam:duration>12</epam:duration>
+                </epam:task>
                 <epam:task type="practic">
-                    <epam:name>e</epam:name>
+                    <epam:name>Java Basics Practical Task</epam:name>
+                    <epam:duration>4</epam:duration>
+                </epam:task>
+            </epam:listOfTasks>
+        </epam:course>
+        <epam:course>
+            <epam:name>Язык Java - расширенные возможности</epam:name>
+            <epam:author>Denis Murashev</epam:author>
+            <epam:dateOfCreate>21-11-2014</epam:dateOfCreate>
+            <epam:listOfTasks>
+                <epam:task type="theory">
+                    <epam:name>Learning the Java Language advanced features</epam:name>
+                    <epam:duration>17</epam:duration>
+                </epam:task>
+                <epam:task type="practic">
+                    <epam:name>Java Advance Practical Task</epam:name>
+                    <epam:duration>16</epam:duration>
+                </epam:task>
+            </epam:listOfTasks>
+        </epam:course>
+        <epam:course>
+            <epam:name>Язык XML</epam:name>
+            <epam:author>Adolf Hitler</epam:author>
+            <epam:dateOfCreate>21-11-2014</epam:dateOfCreate>
+            <epam:listOfTasks>
+                <epam:task type="theory">
+                    <epam:name>Learning XML Language</epam:name>
+                    <epam:duration>6</epam:duration>
+                </epam:task>
+                <epam:task type="practic">
+                    <epam:name>XML Practical Task</epam:name>
+                    <epam:duration>8</epam:duration>
+                </epam:task>
+            </epam:listOfTasks>
+        </epam:course>
+        <epam:course>
+            <epam:name>Язык XSLT и XPath</epam:name>
+            <epam:author>Artem Morozov</epam:author>
+            <epam:dateOfCreate>05-01-2015</epam:dateOfCreate>
+            <epam:listOfTasks>
+                <epam:task type="theory">
+                    <epam:name>Learning XSLT and XPath Basics</epam:name>
+                    <epam:duration>14</epam:duration>
+                </epam:task>
+                <epam:task type="theory">
+                    <epam:name>Equipment Stylesheets</epam:name>
+                    <epam:duration>8</epam:duration>
+                </epam:task>
+            </epam:listOfTasks>
+        </epam:course>
+        <epam:course>
+            <epam:name>Технология Struts Framework</epam:name>
+            <epam:author>Valeria Mayakovskaya</epam:author>
+            <epam:dateOfCreate>15-07-2017</epam:dateOfCreate>
+            <epam:listOfTasks>
+                <epam:task type="theory">
+                    <epam:name>Struts Framework Fundamentals</epam:name>
+                    <epam:duration>8</epam:duration>
+                </epam:task>
+                <epam:task type="practic">
+                    <epam:name>Struts Framework Task</epam:name>
+                    <epam:duration>40</epam:duration>
+                </epam:task>
+                <epam:task type="practic">
+                    <epam:name>Java Message Service Task</epam:name>
+                    <epam:duration>20</epam:duration>
+                </epam:task>
+            </epam:listOfTasks>
+        </epam:course>
+        <epam:course>
+            <epam:name>Процесс производства программного обеспечения</epam:name>
+            <epam:author>Dmitriy Egorov</epam:author>
+            <epam:dateOfCreate>30-11-2016</epam:dateOfCreate>
+            <epam:listOfTasks>
+                <epam:task type="theory">
+                    <epam:name>Mastering Microsoft Project</epam:name>
                     <epam:duration>3</epam:duration>
                 </epam:task>
+                <epam:task type="practic">
+                    <epam:name>MS Project Practical Task</epam:name>
+                    <epam:duration>8</epam:duration>
+                </epam:task>
+                <epam:task type="practic">
+                    <epam:name>Software development process. Development team and its structure</epam:name>
+                    <epam:duration>12</epam:duration>
+                </epam:task>
+            </epam:listOfTasks>
+        </epam:course>
+        <epam:course>
+            <epam:name>Процесс разработки программного обеспечения</epam:name>
+            <epam:author>Dmitriy Egorov</epam:author>
+            <epam:dateOfCreate>30-11-2016</epam:dateOfCreate>
+            <epam:listOfTasks>
+
+                <epam:task type="practic">
+                    <epam:name>Team Project</epam:name>
+                    <epam:duration>80</epam:duration>
+                </epam:task>
+
             </epam:listOfTasks>
         </epam:course>
     </epam:courses>
